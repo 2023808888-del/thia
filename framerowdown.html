@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website</title>
+
+<!-- Import Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: linear-gradient(135deg, #ffd6e0, #ffe4b3, #cde3ff);
+        color: #333;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+    }
+
+    /* Tajuk animasi */
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 52px;
+        margin-top: 30px;
+        animation: titleBounce 2s infinite;
+        position: relative;
+        z-index: 10;
+        color: #ff69b4;
+    }
+
+    @keyframes titleBounce {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+
+    h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 36px;
+        margin-top: 40px;
+        position: relative;
+        z-index: 10;
+        color: #8a2be2;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 20px auto;
+        position: relative;
+        z-index: 10;
+    }
+
+    img {
+        margin-top: 20px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 10;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Bunga-bunga animasi */
+    .flowers {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: floatFlower linear infinite;
+    }
+
+    @keyframes floatFlower {
+        0% { transform: translateY(100vh) rotate(0deg); opacity:0.7; }
+        100% { transform: translateY(-10vh) rotate(360deg); opacity:0; }
+    }
+
+</style>
+</head>
+<body>
+
+<h1>My Personal Website</h1>
+
+<p>
+This is my first journey in personal website development.
+On this website, I will share my journey as a student and more!
+</p>
+
+<h2>My Selfie Photo</h2>
+<img src="athia.jpg" alt="Athia">
+
+<!-- Moving Flowers -->
+<script>
+    const colors = ['#ffb6c1','#ffc0cb','#ff69b4','#ff1493','#ff8da1','#f08080','#ff7f50'];
+    const body = document.body;
+
+    for(let i=0; i<30; i++) {
+        const flower = document.createElement('div');
+        flower.classList.add('flowers'); 
+        const size = Math.random()*20 + 10; // saiz 10px-30px
+        flower.style.width = size + 'px';
+        flower.style.height = size + 'px';
+        flower.style.left = Math.random()*100 + 'vw';
+        flower.style.background = colors[Math.floor(Math.random()*colors.length)];
+        flower.style.animationDuration = (Math.random()*10 + 8) + 's';
+        flower.style.animationDelay = Math.random()*5 + 's';
+        body.appendChild(flower);
+    }
+</script>
+
+</body>
+</html>

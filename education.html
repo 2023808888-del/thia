@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: poppin, poppin;
+            color: white;
+            background: linear-gradient(135deg, #2c003e, #5a0f2e, #000000);
+            background-size: 300% 300%;
+            animation: backgroundMove 10s ease infinite;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            animation: fadeUp 1.5s ease;
+        }
+
+        p, ul {
+            animation: fadeUp 2s ease;
+        }
+
+        .logo {
+            width: 150px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: fadeUp 2.5s ease;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 8px;
+            transition: all 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #ffd700;
+            transform: scale(1.05);
+        }
+
+        /* Music button */
+        .music-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: yellow;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .music-btn:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="ppim_instrumental.mp3" type="audio/mpeg">
+</audio>
+
+<center>
+    <button class="music-btn" onclick="toggleMusic()">▶ Play Music</button>
+
+    <h1 class="title">Education & Appreciation</h1>
+
+    <p>
+        I am a student who takes responsibility throughout my education journey.
+        This journey has shaped me to achieve my goals and gain valuable experiences.
+    </p>
+
+    <ul>
+        <li>Tadika Islam Balun Bidai</li>
+        <li>Sekolah Kebangsaan Balun Bidai</li>
+        <li>Sekolah Menengah Dato' Seri Maharaja Lela</li>
+        <li>Universiti Teknologi MARA (UiTM)</li>
+    </ul>
+
+    <h2 class="title">Appreciation</h2>
+
+    <img src="ppim.jpg" alt="PPIM Logo" class="logo">
+
+    <p>Pergerakan Puteri Islam Malaysia (PPIM)</p>
+
+    <ul>
+        <li>Puteri Bongsu</li>
+        <li>Puteri Kecil</li>
+        <li>Puteri Tengah</li>
+        <li>Puteri Sulong</li>
+    </ul>
+</center>
+
+<script>
+    function toggleMusic() {
+        var music = document.getElementById("bgMusic");
+        var button = document.querySelector(".music-btn");
+
+        if (music.paused) {
+            music.play();
+            button.innerHTML = "⏸ Pause Music";
+        } else {
+            music.pause();
+            button.innerHTML = "▶ Play Music";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5dc; /* BEIGE */
+            font-family: poppin, poppin;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Tajuk */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #5a2d2d;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Family Image Center */
+        .family-photo {
+            text-align: center;
+            margin: 25px 0;
+            animation: fadeIn 1s ease;
+        }
+
+        .family-photo img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+            border: 3px solid #caa;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        /* Hover Effect */
+        .family-photo img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(120, 70, 70, 0.4);
+        }
+
+        /* Caption */
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6b6b6b;
+            font-style: italic;
+        }
+
+        /* List */
+        ol {
+            max-width: 600px;
+            margin: 20px auto;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 8px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p, ol li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Members of My Family</h1>
+
+    <p>
+        I am the second child in my family. My parents are my biggest supporters
+        during happy times and difficult moments.
+    </p>
+
+    <div class="family-photo">
+        <img src="f1.jpg" alt="My Family">
+        <p class="caption">My Lovely Family ❤️</p>
+    </div>
+
+    <h2>Siblings</h2>
+    <ol>
+        <li>Intan Nasuha binti Abdul Khair</li>
+        <li>Nur Athirah binti Abdul Khair</li>
+        <li>Nuraliah Maisarah binti Abdul Khair</li>
+        <li>Nur Aina Zulaikha binti Abdul Khair</li>
+        <li>Allisa Kharina binti Abdul Khair</li>
+        <li>Nur Izzayani binti Abdul Khair</li>
+        <li>Muhammad Faris Fakhrullah bin Abdul Khair</li>
+    </ol>
+
+</body>
+</html>
